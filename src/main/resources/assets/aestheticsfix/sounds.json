@@ -1,0 +1,25 @@
+{
+	"redstone_spark": {
+		"sounds": [
+			"aestheticsfix:redstone/spark_big1",
+			"aestheticsfix:redstone/spark_big2",
+			"aestheticsfix:redstone/spark_big3",
+			{
+				"name": "aestheticsfix:redstone/spark_small1",
+				"weight": 3
+			},
+			{
+				"name": "aestheticsfix:redstone/spark_small2",
+				"weight": 3
+			},
+			{
+				"name": "aestheticsfix:redstone/spark_small3",
+				"weight": 3
+			},
+			{
+				"name": "aestheticsfix:redstone/spark_small4",
+				"weight": 3
+			}
+		]
+	}
+}

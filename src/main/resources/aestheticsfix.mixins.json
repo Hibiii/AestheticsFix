@@ -4,7 +4,8 @@
 	"package": "hibi.aestheticsfix.mix",
 	"compatibilityLevel": "JAVA_16",
 	"client": [
-		"BlockMixin"
+		"BlockMixin",
+		"RedstoneWireBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
