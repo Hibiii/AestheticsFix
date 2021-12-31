@@ -26,7 +26,7 @@ public class Effects {
 		db = new HashMap<Block,EffectDelegate>();
 		db.put(Blocks.AMETHYST_BLOCK, (bs, w, p, r) -> {
 			if(r.nextInt(100) == 0)
-			w.playSound(p.getX(), p.getY(), p.getZ(), SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
+			w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
 		});
 		db.put(Blocks.ICE, (bs, w, p, r) -> {
 			if(r.nextInt(5) != 0) return;
@@ -44,6 +44,30 @@ public class Effects {
 		db.put(Blocks.SOUL_SAND, (bs, w, p, r) -> {
 			if(w.isAir(p.up()) && r.nextInt(150) == 0)
 			w.addParticle(ParticleTypes.SOUL, p.getX() + r.nextDouble(), p.getY() + 1d, p.getZ() + r.nextDouble(), 0d, 0.005d + r.nextDouble() * 0.025d, 0d);
+		});
+		db.put(Blocks.CRIMSON_ROOTS, (bs, w, p, r) -> {
+			if(r.nextInt(10) == 0)
+				w.addParticle(ParticleTypes.CRIMSON_SPORE, p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, 0d, 0d, 0d);
+		});
+		db.put(Blocks.WARPED_ROOTS, (bs, w, p, r) -> {
+			if(r.nextInt(10) == 0)
+				w.addParticle(ParticleTypes.WARPED_SPORE, p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, 0d, 0d, 0d);
+		});
+		db.put(Blocks.SOUL_CAMPFIRE, (bs, w, p, r) -> {
+			if(r.nextInt(100) == 0)
+				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
+		});
+		db.put(Blocks.SOUL_LANTERN, (bs, w, p, r) -> {
+			if(r.nextInt(100) == 0)
+				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
+		});
+		db.put(Blocks.SOUL_TORCH, (bs, w, p, r) -> {
+			if(r.nextInt(100) == 0)
+				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
+		});
+		db.put(Blocks.SOUL_WALL_TORCH, (bs, w, p, r) -> {
+			if(r.nextInt(100) == 0)
+				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
 		});
 	}
 }

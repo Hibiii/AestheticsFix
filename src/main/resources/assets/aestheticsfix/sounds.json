@@ -21,5 +21,16 @@
 				"weight": 3
 			}
 		]
+	},
+	"soul_whisper": {
+		"sounds": [
+			"minecraft:ambient/nether/soulsand_valley/whisper1",
+			"minecraft:ambient/nether/soulsand_valley/whisper2",
+			"minecraft:ambient/nether/soulsand_valley/whisper3",
+			"minecraft:ambient/nether/soulsand_valley/whisper4",
+			"minecraft:ambient/nether/soulsand_valley/whisper5",
+			"minecraft:ambient/nether/soulsand_valley/whisper6",
+			"minecraft:ambient/nether/soulsand_valley/whisper7"
+		]
 	}
 }
