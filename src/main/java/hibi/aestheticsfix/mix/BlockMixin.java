@@ -20,7 +20,7 @@ public class BlockMixin {
 		at = @At("HEAD"),
 		method = "randomDisplayTick(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V"
 	)
-	private void displayTick(BlockState state, World world, BlockPos pos, Random random, CallbackInfo info) {
+	protected void displayTick(BlockState state, World world, BlockPos pos, Random random, CallbackInfo info) {
 		EffectDelegate delegate = Effects.get(state.getBlock());
 		if(delegate != null) delegate.displayTick(state, world, pos, random);
 	}

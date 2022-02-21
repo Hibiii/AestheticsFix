@@ -5,7 +5,9 @@
 	"compatibilityLevel": "JAVA_16",
 	"client": [
 		"BlockMixin",
-		"RedstoneWireBlockMixin"
+		"RedstoneWireBlockMixin",
+		"SoulfulBlockMixin",
+		"RepeaterBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

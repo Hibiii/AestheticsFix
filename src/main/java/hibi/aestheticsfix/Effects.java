@@ -5,9 +5,12 @@ import java.util.Map;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ComparatorBlock;
+import net.minecraft.block.enums.ComparatorMode;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.LightType;
@@ -28,8 +31,16 @@ public class Effects {
 			if(r.nextInt(100) == 0)
 			w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
 		});
+		db.put(Blocks.COMPARATOR, (bs, w, p, r) -> {
+			if(bs.get(Properties.POWERED) && r.nextInt(24) == 0) {
+				if(bs.get(ComparatorBlock.MODE) == ComparatorMode.SUBTRACT)
+					w.playSound(p.getX(), p.getY(), p.getZ(), Init.COMPARATOR_SUBTRACT, SoundCategory.BLOCKS, 0.1f, 1.0f, true);
+				else
+					w.playSound(p.getX(), p.getY(), p.getZ(), Init.COMPARATOR_COMPARE, SoundCategory.BLOCKS, 0.1f, 1.0f, true);
+			}
+		});
 		db.put(Blocks.ICE, (bs, w, p, r) -> {
-			if(r.nextInt(5) != 0) return;
+			if(r.nextInt(4) != 0) return;
 			if(w.getLightLevel(LightType.BLOCK, p) > 11 - bs.getOpacity(w, p)) {
 				Direction dir = Direction.random(r);
 				BlockPos pos2 = p.offset(dir);
@@ -42,8 +53,13 @@ public class Effects {
 			}
 		});
 		db.put(Blocks.SOUL_SAND, (bs, w, p, r) -> {
-			if(w.isAir(p.up()) && r.nextInt(150) == 0)
-			w.addParticle(ParticleTypes.SOUL, p.getX() + r.nextDouble(), p.getY() + 1d, p.getZ() + r.nextDouble(), 0d, 0.005d + r.nextDouble() * 0.025d, 0d);
+			if(w.isAir(p.up()) && r.nextInt(200) == 0) {
+				double x = p.getX() + r.nextDouble();
+				double y = p.getY() + 1d;
+				double z = p.getZ() + r.nextDouble();
+				w.addParticle(ParticleTypes.SOUL, x, y, z, 0d, 0.005d + r.nextDouble() * 0.025d, 0d);
+				w.playSound(x, y, z, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
+			};
 		});
 		db.put(Blocks.CRIMSON_ROOTS, (bs, w, p, r) -> {
 			if(r.nextInt(10) == 0)
@@ -53,21 +69,9 @@ public class Effects {
 			if(r.nextInt(10) == 0)
 				w.addParticle(ParticleTypes.WARPED_SPORE, p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, 0d, 0d, 0d);
 		});
-		db.put(Blocks.SOUL_CAMPFIRE, (bs, w, p, r) -> {
-			if(r.nextInt(100) == 0)
-				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
-		});
 		db.put(Blocks.SOUL_LANTERN, (bs, w, p, r) -> {
-			if(r.nextInt(100) == 0)
-				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
-		});
-		db.put(Blocks.SOUL_TORCH, (bs, w, p, r) -> {
-			if(r.nextInt(100) == 0)
-				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
-		});
-		db.put(Blocks.SOUL_WALL_TORCH, (bs, w, p, r) -> {
-			if(r.nextInt(100) == 0)
-				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
+			if(r.nextInt(300) == 0)
+				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.AMBIENT, 1.0f, 1.0f, true);
 		});
 	}
 }

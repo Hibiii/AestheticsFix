@@ -1,4 +1,16 @@
 {
+	"repeater_hum": {
+		"sounds": [
+			"aestheticsfix:redstone/repeater_hum"
+		]
+	},
+	"repeater_locked": {
+		"sounds": [
+			"aestheticsfix:redstone/repeater_locked1",
+			"aestheticsfix:redstone/repeater_locked2",
+			"aestheticsfix:redstone/repeater_locked3"
+		]
+	},
 	"redstone_spark": {
 		"sounds": [
 			"aestheticsfix:redstone/spark_big1",
@@ -20,6 +32,16 @@
 				"name": "aestheticsfix:redstone/spark_small4",
 				"weight": 3
 			}
+		]
+	},
+	"comparator_compare": {
+		"sounds": [
+			"aestheticsfix:redstone/comparator_compare"
+		]
+	},
+	"comparator_subtract": {
+		"sounds": [
+			"aestheticsfix:redstone/comparator_subtract"
 		]
 	},
 	"soul_whisper": {
