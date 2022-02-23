@@ -12,7 +12,6 @@ public class Init implements ClientModInitializer {
 	public static final SoundEvent COMPARATOR_COMPARE = new SoundEvent(new Identifier("aestheticsfix", "comparator_compare"));
 	public static final SoundEvent COMPARATOR_SUBTRACT = new SoundEvent(new Identifier("aestheticsfix", "comparator_subtract"));
 	public static final SoundEvent LAMP_HUM = new SoundEvent(new Identifier("aestheticsfix", "lamp_hum"));
-	public static final SoundEvent SOUL_WHISPER = new SoundEvent(new Identifier("aestheticsfix", "soul_whisper"));
 	public static final SoundEvent CLOCK_TICK_UP = new SoundEvent(new Identifier("aestheticsfix", "clock_tick_up"));
 	public static final SoundEvent CLOCK_TICK_DOWN = new SoundEvent(new Identifier("aestheticsfix", "clock_tick_down"));
 

@@ -6,7 +6,6 @@
 	"client": [
 		"BlockMixin",
 		"RedstoneWireBlockMixin",
-		"SoulfulBlockMixin",
 		"RepeaterBlockMixin",
 		"AbstractDecorationEntityMixin",
 		"ItemFrameEntityMixin"

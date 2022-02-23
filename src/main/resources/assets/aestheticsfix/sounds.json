@@ -49,17 +49,6 @@
 			"aestheticsfix:redstone/lamp_hum"
 		]
 	},
-	"soul_whisper": {
-		"sounds": [
-			"minecraft:ambient/nether/soulsand_valley/whisper1",
-			"minecraft:ambient/nether/soulsand_valley/whisper2",
-			"minecraft:ambient/nether/soulsand_valley/whisper3",
-			"minecraft:ambient/nether/soulsand_valley/whisper4",
-			"minecraft:ambient/nether/soulsand_valley/whisper5",
-			"minecraft:ambient/nether/soulsand_valley/whisper6",
-			"minecraft:ambient/nether/soulsand_valley/whisper7"
-		]
-	},
 	"clock_tick_up": {
 		"sounds": [{
 			"name": "aestheticsfix:clock_tick_up",
