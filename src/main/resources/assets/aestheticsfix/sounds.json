@@ -44,6 +44,11 @@
 			"aestheticsfix:redstone/comparator_subtract"
 		]
 	},
+	"lamp_hum": {
+		"sounds": [
+			"aestheticsfix:redstone/lamp_hum"
+		]
+	},
 	"soul_whisper": {
 		"sounds": [
 			"minecraft:ambient/nether/soulsand_valley/whisper1",
@@ -54,5 +59,17 @@
 			"minecraft:ambient/nether/soulsand_valley/whisper6",
 			"minecraft:ambient/nether/soulsand_valley/whisper7"
 		]
+	},
+	"clock_tick_up": {
+		"sounds": [{
+			"name": "aestheticsfix:clock_tick_up",
+			"volume": 0.3
+		}]
+	},
+	"clock_tick_down": {
+		"sounds": [{
+			"name": "aestheticsfix:clock_tick_down",
+			"volume": 0.5
+		}]
 	}
 }

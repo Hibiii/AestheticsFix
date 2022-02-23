@@ -70,8 +70,14 @@ public class Effects {
 				w.addParticle(ParticleTypes.WARPED_SPORE, p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, 0d, 0d, 0d);
 		});
 		db.put(Blocks.SOUL_LANTERN, (bs, w, p, r) -> {
-			if(r.nextInt(300) == 0)
+			if(r.nextInt(500) == 0)
 				w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.SOUL_WHISPER, SoundCategory.AMBIENT, 1.0f, 1.0f, true);
+		});
+		db.put(Blocks.REDSTONE_LAMP, (bs, w, p, r) -> {
+			if(bs.get(Properties.LIT)) {
+				if(r.nextInt(12) == 0)
+					w.playSound(p.getX() + 0.5d, p.getY() + 0.5d, p.getZ() + 0.5d, Init.LAMP_HUM, SoundCategory.BLOCKS, 1.0f, 1.0f, true);
+			}
 		});
 	}
 }

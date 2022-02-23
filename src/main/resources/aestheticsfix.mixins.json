@@ -7,7 +7,9 @@
 		"BlockMixin",
 		"RedstoneWireBlockMixin",
 		"SoulfulBlockMixin",
-		"RepeaterBlockMixin"
+		"RepeaterBlockMixin",
+		"AbstractDecorationEntityMixin",
+		"ItemFrameEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
